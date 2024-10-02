@@ -1,0 +1,50 @@
+.list-dish-item {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 10px;
+  margin: 10px;
+}
+.dishes-container {
+  display: flex;
+  flex-direction: column;
+}
+.image {
+  height: 150px;
+  width: 150px;
+}
+.calory-container {
+  display: flex;
+  justify-content: space-between;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
+  width: 120px;
+  border-radius: 25px;
+}
+.negative-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+}
+.postive-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+}
+.count-para {
+  color: #fff;
+  font-family: 'Roboto';
+}

@@ -1,0 +1,12 @@
+.menu-tab-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px;
+  margin-right: 15px;
+}
+.tab-para {
+  font-family: 'Roboto';
+  font-size: 25px;
+}
