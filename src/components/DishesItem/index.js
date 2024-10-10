@@ -1,3 +1,5 @@
+import {useState} from 'react'
+
 import './index.css'
 
 const DishesItem = props => {
@@ -13,12 +15,18 @@ const DishesItem = props => {
     dishAvailability,
   } = dishesData
 
-  const onClickDecreaseBtn = () => {
-    onDecrease()
-  }
-
-  const onClickIncreaseBtn = () => {
+  const [disCount, changeCount] = useState(0)
+  const onClickIncrease = () => {
+    changeCount(disCount + 1)
     onIncrease()
+  }
+  const onClickDecrease = () => {
+    if (disCount === 0) {
+      changeCount(0)
+    } else {
+      changeCount(disCount - 1)
+      onDecrease()
+    }
   }
 
   return (
@@ -37,15 +45,15 @@ const DishesItem = props => {
             <button
               className="negative-btn"
               type="button"
-              onClick={onClickDecreaseBtn}
+              onClick={onClickDecrease}
             >
               -
             </button>
-            <p className="count-para">{count}</p>
+            <p className="count-para">{disCount}</p>
             <button
               className="postive-btn"
               type="button"
-              onClick={onClickIncreaseBtn}
+              onClick={onClickIncrease}
             >
               +
             </button>
